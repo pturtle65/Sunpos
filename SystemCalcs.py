@@ -16,16 +16,16 @@ solarArraySize = round(dailyUsage / sunhoursPerDay, 2)
 adjustedArraySize = round(solarArraySize * 1.2, 2)
 
 # Supposing that I only want to offset part of my electric bill initially. 
-pctOffset = 82 # percent
+pctOffset = 50 # percent
 solarArraySize = round(pctOffset * solarArraySize /100.0, 2)
 adjustedArraySize = round(pctOffset * adjustedArraySize / 100.0, 2)
 
 # Determine how many Solar Panels needed
-panelRatedWattage = 460 # watts
+panelRatedWattage = 455 # watts
 numberOfPanels = round(adjustedArraySize * 1000.00 / panelRatedWattage, 0)
 
 # Cost of panels from Signature Solar
-panelPrice = 271.40 # dollars each
+panelPrice = 296.28 # dollars each
 panelsCost = round(numberOfPanels * panelPrice * 1.0825, 2)
 
 # Output:
